@@ -1,0 +1,229 @@
+\documentclass[a4paper, 12pt, oneside]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+
+\usepackage[brazilian]{babel}
+\usepackage{tgpagella}
+\usepackage{indentfirst}
+
+\usepackage[all]{nowidow}
+
+\usepackage{enumitem}
+
+%Tirar margem das listas
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+\setlist[description]{leftmargin=*}
+
+\usepackage{tocloft}
+
+\usepackage{dblfloatfix}
+\usepackage{float}
+
+\usepackage{natbib}
+
+\usepackage{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\usepackage{listings}
+\lstset{frame=tb,
+   language=C, %C#
+   aboveskip=3mm,
+   belowskip=3mm,
+   showstringspaces=false,
+   columns=flexible,
+   basicstyle={\small\ttfamily},
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   keywordstyle=\color{blue},
+   commentstyle=\color{dkgreen},
+   stringstyle=\color{mauve},
+   breaklines=true,
+   breakatwhitespace=true
+   tabsize=3
+   }
+
+\title{Teste}
+\author{Jonathan Gouvea da Silva}
+\date{April 2019}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+\listoffigures
+\clearpage
+
+\section{Introdução}
+
+Bom dia, meu nome é pipipi popopo.
+
+Novo parágrafo. \\
+Sem outro parágrafo. \newline
+\newpage
+Outra linha \label{marcador_outra_linha}
+
+\textbf{Negrito} não negrito \textbf{e mais negrito} e menos.
+
+\textit{Itálico}
+
+\texttt{Typewrite}
+
+\textsc{Small caps}
+
+\underline{under}
+
+
+\section{Pipipi}
+
+Uma nova seção nasceu.
+
+    \subsection{Popopo}
+        Uma subseção.
+        
+    \subsection{Outra}
+        Outra
+        
+    \subsection{Mais uma}
+        \subsubsection{Outra}
+            .
+            
+\newpage
+
+\section{Tamanhos}
+
+{\huge gigantesco oi}
+
+{\LARGE gigantesco oi}
+
+{\large gigantesco oi}
+
+{\small gigantesco oi}
+
+{\footnotesize gigantesco oi}
+
+\begin{itemize}
+    \item Item número 1
+    \item numero 2
+    \item 3
+    \item outro
+    
+    \begin{itemize}
+        \item Mais uma
+        \item lista
+    \end{itemize}
+    
+    Voltei para a lista
+    
+    \begin{itemize}
+        \item Oi
+        \begin{itemize}
+            \item Oi 
+        \end{itemize}
+    \end{itemize}
+    
+\end{itemize}
+
+\begin{enumerate}
+    \item Oi
+    \item Tchau
+    \begin{enumerate}
+        \item Mais uma
+        \item Outra
+        \begin{itemize}
+            \item Oi
+        \end{itemize}
+    \end{enumerate}
+\end{enumerate}
+
+\footnote{Isso é um footnote}
+
+\begin{description}
+    \item[Olá] é uma palavra
+    \item[Peixe] é uma comida
+\end{description}
+
+Como visto na página \pageref{marcador_outra_linha}, pipipi popopó.
+
+\centering Texto
+
+Bj\"ork
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{B.jpg}
+    \caption{Um belo guaxinim}
+    \label{fig:guaxinim1}
+\end{figure}
+
+\begin{figure}[!H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{g.jpg}
+    \caption{Um outro guaxinim}
+    \label{fig:guaxinim2}
+\end{figure}
+
+Mais texto
+
+\[ a + b = x + 2\]
+
+Na equação \( c * 5 - 8 = -78\) vemos
+
+$a*b = c $
+
+\[ \frac{x}{5} \]
+
+\[ \integral \]
+
+\begin{lstlisting}
+    //Código que faz parte do artigo para iniciantes em www.alexandregama.wordpress.com
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main() {
+   //Declaração das variáveis para guardar os valores
+   int dividendo;
+   int divisor;
+   
+   //Imprime mensagem para a inserção do primeiro valor
+   printf("Digite o valor do dividendo:");
+   //Guarda o valor digitado pelo usuário na variável dividendo
+   scanf("%d", &dividendo);
+   
+   //Imprime mensagem para a inserção do segundo valor
+   printf("\nDigite o valor do divisor:");
+   //Guarda o valor digitado pelo usuário na variável divisor
+   scanf("%d", &divisor);   
+   
+   //Verifica se o valor do divisor é igual a zero
+   if (divisor == 0) {
+      //Imprime o valor -1 caso o divisor seja zero
+      printf("-1\n");
+   }
+   //Verifica se o valor do cálculo da divisão é negativo
+   else if ((dividendo / divisor < 0)) {
+      //Imprime o valor 0 caso o resultdo da divisão seja negativo
+      printf("Valor encontrado: 0\n");
+   }
+   else {
+      //Como o divisor não é zero e o cálculo não é negativo, imprime o resultado da divisão
+      printf("Valor calculado: %d \n", (dividendo / divisor));
+   }
+   
+   system("PAUSE");
+}
+\end{lstlisting}
+
+\nocite{livro}
+
+\bibliographystyle{plain}
+\bibliography{referencia}
+
+\end{document}
+

@@ -1,0 +1,169 @@
+\documentclass{beamer}
+\usetheme{Pittsburgh}
+\usecolortheme{whale}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+
+\usepackage{listings}
+\lstset{
+   aboveskip=3mm,
+   belowskip=3mm,
+   showstringspaces=false,
+   columns=flexible,
+   basicstyle={\small\ttfamily},
+   numbers=left,
+   language=[LaTeX]{TeX},
+   numberstyle=\tiny\color{gray},
+   breaklines=true,
+   breakatwhitespace=true
+   tabsize=3
+   }
+
+
+\title{\LaTeX}
+\subtitle{Introdução}
+\author{Jonathan Gouvea}
+\date{2019}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Agenda}
+    \tableofcontents
+\end{frame}
+
+\section{Iniciando}
+
+\begin{frame}{O que é \LaTeX}
+    \begin{itemize}
+        \item Sistema de preparação de documentos
+        \item Utiliza tags de marcação para formatar o documento
+        \item Documentos com aparência verdadeiramente profissional
+        \item Focar no conteúdo e não na aparência
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Material}
+    \begin{itemize}
+        \item Existem diversos compiladores
+        \item Usaremos o Overleaf
+    \end{itemize}
+    
+    \begin{figure}
+    \includegraphics[scale=0.2]{ov.png}
+    \caption{Logo do Overleaf}
+    \end{figure}
+\end{frame}
+
+\section{Estrutura}
+\begin{frame}[fragile]{Iniciando}
+    \Large Estrutura básica
+    \begin{lstlisting}
+\documentclass[12pt,a4paper,notitlepage]{report}
+\usepackage[utf8]{inputenc}
+
+\title{Exemplo}
+\author{Jonathan}
+\date{2019}
+
+\begin{document}
+    \maketitle
+\end{document}
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Documentos}
+    \begin{columns}
+    \begin{column}{0.5\textwidth}
+    \centering Tipos de documentos
+    \begin{itemize}
+        \item \texttt{article}
+        \item \texttt{minimal}
+        \item \texttt{report}
+        \item \texttt{book}
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+    \centering Opções dos documentos
+    \begin{itemize}
+        \item \texttt{10pt, 11pt, 12pt}
+        \item \texttt{a4paper, letterpaper}
+        \item \texttt{titlepage, notitlepage}
+        \item \texttt{onecolumn, twocolumn}
+        \item \texttt{twoside, oneside}
+        \item \texttt{onecolumn, twocolumn}
+    \end{itemize}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Tags principais}
+    \begin{columns}
+    \column{0.5\textwidth}\\
+    Pular linha\\
+    \textbf{Negrito}\\
+    \textit{Itálico}\\
+    \textsc{Small Caps}\\
+    \texttt{Typewriter}\\
+    \underline{Underline}\\
+    \column{0.5\textwidth}
+        \begin{lstlisting}
+\\ ou \newline
+\textbf{Negrito}
+\textit{Itálico}
+\textsc{Small Caps}
+\texttt{Typewriter}
+\underline{Underline}
+        \end{lstlisting}
+    \end{columns}    
+\end{frame}
+
+\begin{frame}{Títulos, Capítulos, Seções}
+    \begin{itemize}
+        \item \textsc{chapter}
+        \item \textsc{section}
+        \item \textsc{subsection}
+        \item \textsc{subsubsection}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Tamanhos, Listagens}
+    \begin{description}
+        \item [Sizes]
+            \begin{itemize}
+                \item SMALL
+                \item LARGE
+                \item Large
+                \item Footnotesize
+                \item huge
+            \end{itemize}
+            
+        \item [Listagens]
+            \begin{itemize}
+                \item description
+                \item itemize
+                \item enumerate
+            \end{itemize}
+    \end{description}
+\end{frame}
+
+\begin{frame}{Cross Reference}
+    Diferentes maneiras de se referir a outra parte do texto
+    \begin{itemize}
+        \item label
+        \item ref
+        \item pageref
+    \end{itemize}
+    
+    footnote
+\end{frame}
+
+
+
+\end{document}
+
